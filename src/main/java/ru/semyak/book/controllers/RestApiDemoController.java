@@ -43,11 +43,11 @@ public class RestApiDemoController {
 
     @PutMapping("/{id}")
     ResponseEntity<Coffee> putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
-        return (!coffeeRepository.existsById(id))
+        return (coffeeRepository.existsById(id))
                 ? new ResponseEntity<>(coffeeRepository.save(coffee),
-                HttpStatus.CREATED)
+                HttpStatus.OK)
                 : new ResponseEntity<>(coffeeRepository.save(coffee),
-                HttpStatus.OK);
+                HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
