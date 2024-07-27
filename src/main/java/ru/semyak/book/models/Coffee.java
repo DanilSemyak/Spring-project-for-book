@@ -3,6 +3,7 @@ package ru.semyak.book.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.UUID;
 
